@@ -1,0 +1,151 @@
+.footer {
+    background-color: $black-color;
+    &-logo-mb {
+        display: none;
+    }
+
+    &-content {
+        position: relative;
+        display: flex;
+        gap: 0 245px;
+        padding-top: 100px;
+        color: $primary-color;
+        align-items: center;
+    }
+
+    &-info {
+        max-width: 530px;
+    }
+
+    &-heading {
+        margin-bottom: 71px;
+    }
+
+    &-contact {
+        font-size: 30px;
+        line-height: calc(34 / 30);
+        font-weight: 400;
+        display: flex;
+        margin-bottom: 20px;
+        &::before {
+            content: "\2022";
+            display: block;
+            margin: 0 15px;
+            color: $primary-color;
+
+        }
+    }
+
+    &-text {
+        opacity: 0.6;
+        margin-bottom: 50px;
+    }
+
+    &-line {
+        display: none;
+        margin: 0 auto;
+        margin-top: 62px;
+    }
+
+    &-sponsor {
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+        color: $primary-color;
+        justify-content: space-between;
+
+        span {
+            font-size: 24px;
+            line-height: calc(32 / 24);
+            opacity: 0.4;
+            font-weight: 400;
+        }
+    }
+
+    &-policy {
+        line-height: calc(30 / 24);;
+    }
+
+    &-btn {
+        display: none;
+        position: absolute;
+        top: 87px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        img {
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        
+        span {
+            font-size: 24px;
+            line-height: calc(32 / 24);
+            color: white;
+            opacity: 0.4;
+            font-family: $first-font;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .footer-btn {
+        display: block;
+    }
+}
+
+
+@media screen and (max-width: 1279.98px) {
+    .footer-content {
+        gap: 0 120px;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 80px;
+    }
+
+    .footer-heading, .footer-text {
+        margin-bottom: 40px;
+    }
+
+    .footer-contact {
+        font-size: 24px;
+        line-height: calc(34 / 24);
+        margin-bottom: 12px;
+    }
+
+    .footer-img {
+        margin-top: 71px;
+    }
+
+    .footer-line {
+        display: block;
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .footer-logo-mb {
+        display: block;
+        padding-top: 56px;
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .footer-sponsor {
+        padding: 32px  0 34px;
+        margin: 0;
+        span {
+            font-size: 16px;
+            line-height: calc(32 / 16);
+        }
+    }
+}

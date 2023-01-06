@@ -1,0 +1,96 @@
+.header {
+    background-color: $black-color;
+    padding-top: 30px;
+    &-container {
+        padding-bottom: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 0 50px;
+    }
+    
+    &-item.active {
+        &::before {
+            content:"\2022";
+            color: $white-color;
+            padding-right: 10px;
+        }
+        a {
+            opacity: 1;
+        }
+    }
+    
+    &-link {
+        text-decoration: none;
+        color: $white-color;
+        text-transform: lowercase;
+        font-size: 18px;
+        line-height: calc(30 / 18);
+        opacity: 0.4;
+    }
+
+    &-contact {
+        color: white;
+    }
+
+    &-bar {
+        display: none;
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        gap: 0 30px;    
+    }
+
+    &-line-mb {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header-logo {
+        position: relative;
+        bottom: -4px;
+    }
+    .header-list {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $primary-color;
+        flex-direction: column;
+        width: 50vw;
+        gap: 40px 0;
+        padding-top: 40px;
+        z-index: 99;
+        transition: all 0.2s linear;
+        transform: translateX(100%);
+
+        &.is-show {
+            transform: translateX(0);
+        }
+    }
+
+    .header-link {
+        color: $black-color;
+    }
+
+    .header-bar {
+        display: block;
+    }
+
+    .header-line {
+        display: none;
+    }
+
+    .header-line-mb {
+        display: block;
+    }
+}
